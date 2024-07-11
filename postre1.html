@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brownie de Chocolate - Dulces Delicias</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="./Images/logo.png" type="image/png">
+</head>
+<body class="postre1-background">
+    <!-- Encabezado de la página -->
+    <header class="fixed-top">
+        <!-- Navegación principal -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Images/logo.png" alt="Logo Dulces Delicias" class="logo-img img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#mas-populares">Más Populares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categoria.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="postre1-content">
+        <div class="postre1-header">
+            <div class="postre1-title-container">
+                <div class="postre1-title">
+                    <h1>Brownie de Chocolate</h1>
+                </div>
+            </div>
+            <div class="postre1-image-container">
+                <img src="./Images/browne.avif" alt="Brownie de Chocolate" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="postre1-details-container">
+            <div class="postre1-details container">
+                <div class="row">
+                    <div class="col-md-6 postre1-ingredients">
+                        <h2>Ingredientes</h2>
+                        <ul id="ingredientes-list"></ul>
+                    </div>
+                    <div class="col-md-6 postre1-preparation">
+                        <h2>Preparación</h2>
+                        <ol id="preparacion-list"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="porciones">
+            <p>Porciones:</p>
+            <button id="menos-porciones" class="btn btn-secondary">-</button>
+            <span id="porciones-count">6</span>
+            <button id="mas-porciones" class="btn btn-secondary">+</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="social-section">
+                <p class="follow-us">Síguenos en nuestras redes sociales:</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <p>©Dulces Delicias. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

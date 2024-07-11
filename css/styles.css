@@ -1,0 +1,1017 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f3f1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Asegurar que el contenedor principal ocupe todo el espacio disponible */
+main {
+    flex: 1;
+}
+
+/* Ajuste del logo dentro de la barra de navegación */
+.navbar-brand .logo-img {
+    height: 60px; /* Tamaño ajustado para dispositivos móviles */
+}
+
+/* Estilo para el encabezado y la barra de navegación */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    height: 70px; /* Ajusta la altura según tu preferencia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    width: 100%; /* Hace que la barra ocupe todo el ancho */
+    top: 0; /* Asegura que esté siempre en la parte superior */
+}
+
+/* Ajustar la posición de los elementos de navegación */
+.navbar-nav {
+    margin-left: 50px; /* Ajusta este valor para mover los elementos a la izquierda */
+    margin-right: 20px; /* Ajusta este valor para mover los elementos a la derecha */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: #5d3b5a !important; /* Añadir !important para forzar la aplicación del color */
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffcad4 !important; /* Color de fondo al pasar el mouse */
+    color: #ffffff !important; /* Color de la letra al pasar el mouse */
+    padding: 10px 30px; /* Ajusta el tamaño del fondo */
+}
+
+/* Estilo para la sección hero */
+.hero {
+    background-image: url('../Images/fondoprincipal.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* Estilo para el título de la sección hero */
+.hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5.5rem;
+    color: #f0aac7;
+    margin-top: -150px; /* Ajusta esto para mover hacia arriba o abajo */
+    margin-bottom: 100px; /* Ajusta esto para cambiar la distancia con el subtítulo */
+}
+
+/* Estilo para el subtítulo de la sección hero */
+.hero p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #5d3b5a;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Fondo para el contenedor común */
+.content-with-background {
+    background-image: url('../Images/fondo_dona.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que el fondo se mantenga fijo al hacer scroll */
+    background-position: center; /* Centra la imagen */
+    padding: 40px 0;
+}
+
+/* Estilo para la sección Más Populares */
+#mas-populares {
+    font-family: 'Pacifico', cursive;
+    color: #5d3b5a !important;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#mas-populares h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0px;
+    margin-top: -30px;
+}
+
+/* Ajuste de las columnas personalizadas */
+.custom-col {
+    padding-left: 10px; /* Espacio entre columnas */
+    padding-right: 10px; /* Espacio entre columnas */
+    padding-top: 50px; /* Espacio entre filas */
+    padding-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Estilo para las tarjetas de Bootstrap */
+.popular-item {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    margin-bottom: 20px; /* Ajusta el espacio alrededor de cada elemento para mayor separación */
+}
+
+.popular-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.popular-item:hover img {
+    opacity: 0;
+}
+
+.popular-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #5d3b5a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popular-item:hover .popular-info {
+    opacity: 1;
+}
+
+.popular-info h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y la descripción */
+}
+
+/* Nuevos estilos para los enlaces dentro de .popular-info */
+.popular-info a {
+    color: #5d3b5a; /* Cambia esto al color que prefieras */
+    text-decoration: none; /* Esto quita el subrayado */
+    transition: color 0.3s; /* Añadir transición para el cambio de color */
+}
+
+.popular-info a:hover {
+    color: #f0aac7; /* Cambia esto al color que prefieras cuando se pasa el mouse por encima */
+    text-decoration: none; /* Asegúrate de que el subrayado siga desactivado */
+}
+
+.popular-info p {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2rem; /* Ajusta el tamaño de la descripción */
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------SOLO PARA DISPOSITIVOS MOVILES-------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Ajustes para dispositivos móviles */
+@media (max-width: 450px) {
+    .hero h1 {
+        font-size: 3rem; /* Tamaño más pequeño para móviles */
+        margin-top: -110px;
+        margin-bottom: 50px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        height: 65px; /* Tamaño más pequeño para móviles */
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustar el icono de las tres rayas */
+    .navbar-toggler {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    /* Centrar los elementos del menú desplegable */
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Asegurar que el menú desplegable se muestra correctamente */
+    .navbar-collapse {
+        background-color: #ffffff; /* Fondo blanco para el menú desplegable */
+        width: 100%;
+        z-index: 9999;
+        padding-top: 20px; /* Añade espacio superior */
+        padding-bottom: 20px; /* Añade espacio inferior */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: -20px 0; /* Espacio entre los elementos del menú */
+    }
+
+    .navbar-collapse.collapse.show {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+    }
+
+    header {
+        padding-bottom: 10px; /* Añade espacio inferior para separar contenido */
+    }
+
+    nav ul li a {
+        font-size: 1.5rem; /* Ajusta este valor para cambiar el tamaño de la letra de los elementos del menú en móviles */
+        padding: 10px 15px; /* Ajusta el padding para el tamaño del fondo rosa */
+        display: inline-block;
+    }
+
+    .navbar-brand .logo-img {
+        margin-left: 0; /* Resetea el margen para dispositivos móviles */
+    }
+}
+
+/* Estilo para la sección de videos */
+#videos {
+    font-family: 'Pacifico', cursive;
+    color: #5d3b5a !important;
+    padding: 180px 20px;
+    text-align: center;
+}
+
+#videos h2 {
+    font-size: 3.5rem;
+    margin-bottom: 80px;
+    margin-top: -160px;
+}
+
+/* Contenedor para hacer los videos responsivos */
+.video-item {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 20px auto; /* Centra los videos dentro de la columna y añade espacio entre ellos */
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos personalizados para mover videos */
+.video-left {
+    margin-left: auto;
+    margin-right: 5%; /* Ajusta este valor para mover el video hacia la izquierda */
+}
+
+.video-right {
+    margin-left: 5%; /* Ajusta este valor para mover el video hacia la derecha */
+    margin-right: auto;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+    .col-md-6 {
+        flex-basis: 100%; /* Hace que las columnas ocupen todo el ancho */
+        max-width: 100%; /* Hace que las columnas ocupen todo el ancho */
+    }
+
+    .video-left, .video-right {
+        margin: 0; /* Remueve márgenes personalizados en móviles */
+    }
+
+    .video-item {
+        margin-bottom: 20px; /* Añade espacio entre videos en móviles */
+    }
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #5d3b5a; /* Cambia este color según tus necesidades */
+    color: white;
+    padding: 0px 0; /* Aumenta el padding para hacer el footer más alto */
+    width: 100%;
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+    text-align: center; /* Centra el texto dentro del footer */
+    z-index: 1; /* Asegúrate de que el z-index sea mayor que el del contenido principal */
+}
+
+.footer p {
+    margin: 0;
+    padding: 10px 0; /* Ajusta el padding para cambiar la altura del texto de derechos reservados */
+}
+
+.footer .social-section {
+    margin-top: 0px; /* Ajusta el margen superior para separar del texto anterior */
+}
+
+.footer .follow-us {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    margin-bottom: 0px; /* Espacio entre el texto y los iconos */
+}
+
+.footer .social-icons {
+    text-align: center; /* Centra los iconos debajo del texto */
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Añade espacio entre los iconos */
+}
+
+.footer .social-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem; /* Aumenta el tamaño de los iconos */
+}
+
+.footer .social-icon:hover {
+    color: #e74c3c; /* Cambia el color de hover según tus necesidades */
+}
+
+
+
+/* Espacio pal carrusel xdddd */
+
+/* Ajustes de texto en el carrusel */
+.carousel-caption {
+    position: absolute;
+    top: 30%; /* Ajusta este valor para mover verticalmente */
+    left: 70%; /* Ajusta este valor para mover horizontalmente */
+    transform: translate(0%, -20%); /* Ajusta este valor para mover con precisión */
+    padding: 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* PARTE DEL FONDO PRINCIPAL 1 */
+.carousel-caption h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 8vw; /* Cambia este valor para ajustar el tamaño del título */
+    color: #e278a4; /* Cambia este valor para ajustar el color del título */
+    margin-bottom: 2vw; /* Espacio entre el título y el subtítulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.carousel-caption p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5vw; /* Cambia este valor para ajustar el tamaño del subtítulo */
+    color: #5d3b5a; /* Cambia este valor para ajustar el color del subtítulo */
+    margin-top: 2vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+/* PARTE DEL FONDO PRINCIPAL 2 */
+.carousel-caption1 h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5vw; /* Cambia este valor para ajustar el tamaño del título */
+    color: #e278a4; /* Cambia este valor para ajustar el color del título */
+    margin-bottom: 4vw; /* Espacio entre el título y el subtítulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.carousel-caption1 p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5vw; /* Cambia este valor para ajustar el tamaño del subtítulo */
+    color: #ffffff; /* Cambia este valor para ajustar el color del subtítulo */
+    margin-top: 2vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.carousel-caption1 {
+    position: absolute;
+    top: 50%; /* Ajusta este valor para mover verticalmente */
+    left: 50%; /* Ajusta este valor para mover horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta este valor para centrar el contenido */
+    padding: 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* PARTE DEL FONDO PRINCIPAL 3 */
+.carousel-caption2 h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 8vw; /* Cambia este valor para ajustar el tamaño del título */
+    color: #e278a4; /* Cambia este valor para ajustar el color del título */
+    margin-bottom: 2vw; /* Espacio entre el título y el subtítulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.carousel-caption2 p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5vw; /* Cambia este valor para ajustar el tamaño del subtítulo */
+    color: #5d3b5a; /* Cambia este valor para ajustar el color del subtítulo */
+    margin-top: 2vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.carousel-caption2 {
+    position: absolute;
+    top: 50%; /* Ajusta este valor para mover verticalmente */
+    left: 50%; /* Ajusta este valor para mover horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta este valor para centrar el contenido */
+    padding: 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Ajustes de tamaño para las imágenes del carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 100vh; /* Asegura que todas las imágenes tengan la misma altura */
+    object-fit: cover; /* Mantiene las proporciones de las imágenes y las ajusta */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 60vh; /* Ajusta la altura del carrusel en dispositivos móviles */
+    }
+
+    .carousel-caption h1, .carousel-caption1 h1, .carousel-caption2 h1 {
+        font-size: 6vw; /* Ajusta el tamaño del texto para móviles */
+    }
+
+    .carousel-caption p, .carousel-caption1 p, .carousel-caption2 p {
+        font-size: 3vw; /* Ajusta el tamaño del texto para móviles */
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Fondo para la página de Categorías */
+/* ---------------------------------------------------------------------------- */
+.categories-background {
+    background-image: url('../Images/fondodulces.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Estilo para las secciones de categorías */
+.category-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.category-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 6rem; /* Ajusta el tamaño según sea necesario */
+    color: #804000; /* Color del texto */
+    background-color: #FFFCC7; /* Fondo negro con 50% de transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    display: inline-block; /* Ajusta el contenedor al tamaño del texto */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 10px solid #f89e9c; /* Color del borde */
+}
+
+/* Estilo para las imágenes de la categoría */
+/* Estilo para las imágenes de la categoría */
+.category-image {
+    width: 100%;
+    position: relative;
+    height: 100%; /* Ajusta esta altura según tu preferencia */
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    max-height: 380px; /* Asegura que todas las imágenes tengan la misma altura */
+    border: 8px solid #f7801a; /* Color del borde */
+
+}
+/* .popular-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+} */
+
+
+/* Ajuste para la sección de categorías */
+.category-section {
+    margin-bottom: 190px; /* Ajusta este valor para agregar espacio entre la sección y el footer */
+}
+
+
+    
+
+
+.category-image:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para hacer que las imágenes se ajusten en dispositivos móviles */
+@media (max-width: 767px) {
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .category-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-image {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Estilo específico para la página de "Sobre Nosotros" */
+/* ---------------------------------------------------------------------------- */
+
+.sobre-nosotros-background {
+    background-image: url('../Images/fondogolosina.jpg'); /* Fondo de la página */
+    background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
+    background-position: center; /* Centra el fondo */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    min-height: 100vh; /* Altura mínima de la página */
+    display: flex; /* Usa flexbox para el layout */
+    flex-direction: column; /* Permite que el contenido fluya hacia abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
+.sobre-nosotros-content {
+    padding-top: 100px; /* Ajuste del padding superior */
+    padding-bottom: 100px; /* Añade padding inferior para asegurar que el contenido no se corte */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+/* Título principal */
+.sobre-nosotros-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem; /* Ajusta el tamaño según sea necesario */
+    color: #f89e9c; /* Color del texto */
+    background-color: #FFFCC7;; /* Fondo con transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    display: inline-block; /* Ajusta el contenedor al tamaño del texto */
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 50px; /* Espacio inferior */
+    text-shadow: 5px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 10px solid #f89e9c; /* Color del borde */
+    margin-left: 50px;
+}
+
+/* Clase genérica para los textos */
+.sobre-nosotros-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    color: #96305a; /* Color del texto */
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Ajusta el contenedor al tamaño del texto */
+    align-items: center; /* Alinea el texto verticalmente */
+    justify-content: center; /* Alinea el texto horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 15px solid #f89e9c; /* Color del borde */
+    width: auto; /* Asegura que el ancho sea automático */
+}
+
+/* Clases específicas para cada párrafo */
+.parrafo1, .parrafo2, .parrafo3, .parrafo4 {
+    width: auto; /* Ajusta el ancho automáticamente */
+    max-width: 1750px; /* Establece un ancho máximo */
+}
+
+/* Ajuste para la clase parrafo2 */
+.parrafo1 {
+    margin-top: 40px; /* Ajusta el margen superior */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+    margin-left: 50px; /* Asegura que el margen izquierdo sea automático */
+    margin-right: 20px; /* Ajusta la distancia desde el borde derecho */
+    width: auto; /* Ajusta el ancho automáticamente */
+    display: block; /* Asegura que se comporte como un bloque */
+}
+
+/* Ajuste para la clase parrafo2 */
+.parrafo2 {
+    margin-top: 40px; /* Ajusta el margen superior */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+    margin-left: auto; /* Asegura que el margen izquierdo sea automático */
+    margin-right: 20px; /* Ajusta la distancia desde el borde derecho */
+    width: auto; /* Ajusta el ancho automáticamente */
+    display: block; /* Asegura que se comporte como un bloque */
+}
+
+.parrafo3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    color: #96305a; /* Color del texto */
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Ajusta el contenedor al tamaño del texto */
+    align-items: center; /* Alinea el texto verticalmente */
+    justify-content: center; /* Alinea el texto horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 10px solid #f89e9c; /* Color del borde */
+    width: auto; /* Ajusta el ancho automáticamente */
+    max-width: 1750px; /* Establece un ancho máximo */
+    margin-left: 55px; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+}
+
+.parrafo4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    color: #96305a; /* Color del texto */
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Ajusta el contenedor al tamaño del texto */
+    align-items: center; /* Alinea el texto verticalmente */
+    justify-content: center; /* Alinea el texto horizontalmente */
+    margin-top: 90px; /* Espacio superior */
+    margin-bottom: 100px; /* Espacio inferior */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 10px solid #f89e9c; /* Color del borde */
+    width: auto; /* Ajusta el ancho automáticamente */
+    max-width: 1750px; /* Establece un ancho máximo */
+    margin-left: 60px; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilo para imágenes */
+.imagen1, .imagen2 {
+    margin-top: 20px; /* Ajusta el margen superior */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+    max-width: 100%; /* El ancho máximo de la imagen es del 100% */
+    height: -500px; /* La altura de la imagen es automática */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
+/* Ajuste específico para imagen1 */
+.imagen1 {
+    margin-left: 60px; /* Ajusta la distancia desde el borde izquierdo */
+    margin-right: -500px;
+    margin-top: 60px;
+}
+
+/* Ajuste específico para imagen2 */
+.imagen2 {
+    margin-right: -60px; /* Ajusta la distancia desde el borde derecho */
+    margin-top: 25px;
+    max-width: 100% !important;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+    .sobre-nosotros-title {
+        font-size: 4rem; /* Tamaño de texto para móviles */
+    }
+
+    .sobre-nosotros-text {
+        font-size: 1.5rem; /* Tamaño de texto para móviles */
+    }
+
+    .parrafo1, .parrafo2, .parrafo3, .parrafo4 {
+        width: 95%; /* Ajusta el ancho para dispositivos móviles */
+        margin-left: auto; /* Centra el contenedor horizontalmente */
+        margin-right: auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .imagen1, .imagen2 {
+        width: 80%; /* Ajusta el ancho para dispositivos móviles */
+        margin-left: auto; /* Centra la imagen horizontalmente */
+        margin-right: auto; /* Centra la imagen horizontalmente */
+    }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+
+.contacto-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #96305a;
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-bottom: 50px;
+    margin-top: 90px;
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mayor legibilidad */
+    border: 15px solid #f89e9c; /* Color del borde */
+    display: inline-block; /* Se adapta al tamaño del texto */
+    max-width: 100%;
+    
+}
+
+.form-group label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #96305a;
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mayor legibilidad */
+    border: 2px solid #f89e9c; /* Color del borde */
+    display: inline-block; /* Se adapta al tamaño del texto */
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #f89e9c;
+}
+
+.btn-primary {
+    background-color: #f89e9c;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e0788c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    background-color: #FFFCC7; /* Fondo con transparencia */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 35px; /* Bordes redondeados */
+    border: 15px solid #f89e9c; /* Color del borde */
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0; /* Remueve el centrado automático */
+    transform: translateX(-50%); /* Mueve el formulario hacia la izquierda */
+}
+
+/* Media queries para asegurar la adaptabilidad */
+@media (max-width: 767px) {
+    .contacto-title {
+        font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(0); /* Restablece la posición en dispositivos móviles */
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .contact-form {
+        padding: 15px;
+        border: 10px solid #f89e9c;
+        transform: translateX(0); /* Restablece la posición en dispositivos móviles */
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* -------------------CAMBIOS PARA LOS POSTRES---------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+.postre1-background, .postre2-background {
+    background-image: url('../Images/fondocupcake.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+.postre1-content, .postre2-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postre1-header, .postre2-header {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 50px;
+    border: 5px solid #fffcc8;
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 80%;
+    height: 400px;
+}
+
+.postre1-title-container, .postre2-title-container {
+    background-color: #804000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex: 1;
+    min-width: 50%;
+}
+
+.postre1-title, .postre2-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #fffcc8;
+    text-align: center;
+    margin: 0;
+}
+
+.postre1-image-container, .postre2-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.postre1-image-container img, .postre2-image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.postre1-details-container, .postre2-details-container {
+    margin-bottom: 50px;
+}
+
+.postre1-details, .postre2-details {
+    background-color: #fffcc8;
+    padding: 20px;
+    border-radius: 35px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.postre1-ingredients, .postre2-ingredients, .postre1-preparation, .postre2-preparation {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #804000;
+}
+
+.postre1-ingredients h2, .postre2-ingredients h2, .postre1-preparation h2, .postre2-preparation h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #804000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.postre1-ingredients ul, .postre2-ingredients ul, .postre1-preparation ol, .postre2-preparation ol {
+    text-align: left;
+    padding-left: 20px;
+    max-height: 500px; /* Limita la altura máxima de las listas */
+    overflow-y: auto; /* Habilita el desplazamiento si el contenido excede la altura máxima */
+}
+
+.postre1-ingredients li, .postre2-ingredients li, .postre1-preparation li, .postre2-preparation li {
+    margin-bottom: 10px;
+}
+
+/* Media queries */
+@media (max-width: 767px) {
+    .postre1-title, .postre2-title {
+        font-size: 2rem;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .postre1-header, .postre2-header {
+        flex-direction: column;
+    }
+
+    .postre1-ingredients, .postre2-ingredients, .postre1-preparation, .postre2-preparation {
+        font-size: 1rem;
+    }
+
+    .postre1-ingredients h2, .postre2-ingredients h2, .postre1-preparation h2, .postre2-preparation h2 {
+        font-size: 2rem;
+    }
+}
+
+.porciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -150px;
+    margin-bottom: 100px;
+    padding: 10px;
+    background-color: #fffcc8;
+    border-radius: 10px;
+}
+
+.porciones p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #804000;
+    margin-right: 10px;
+}
+
+.porciones .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #804000;
+    color: #fffcc8;
+    border: none;
+    border-radius: 5px;
+}
+
+.postre1-details-container, .postre2-details-container {
+    margin-bottom: 200px;
+}
